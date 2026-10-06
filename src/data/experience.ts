@@ -3,25 +3,23 @@ import type { ExperienceItem } from "@/types";
 export const experience: ExperienceItem[] = [
   {
     id: "aurora-labs",
-    role: "Lead Frontend Engineer",
+    role: "UX UI Engineer",
     company: "Aurora Labs",
     period: "2024 — Present",
     location: "Remote",
-    type: "Full-time",
+    type: " ",
     summary:
-      "Leading the frontend guild for a fintech platform used by 30,000+ freelancers.",
+      "Leading the frontend team to ship a new design system and dashboard for Aurora Labs' core product.",
     highlights: [
-      "Rebuilt the core dashboard on Next.js App Router, cutting time-to-interactive by 64%",
-      "Introduced a shared design system adopted across 3 product teams",
-      "Mentored 4 engineers and established the team's frontend review standards",
+      "Built a design system with reusable components and documentation for internal and external use",
     ],
   },
   {
     id: "nimbus",
-    role: "Senior Frontend Engineer",
+    role: "Mobile App Developer",
     company: "Nimbus",
     period: "2022 — 2024",
-    location: "Bandung, Indonesia",
+    location: "",
     type: "Full-time",
     summary:
       "Owned the visual page-builder product end to end, from architecture to shipping.",
