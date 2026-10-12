@@ -75,7 +75,7 @@ export const projects: Project[] = [
       "Design System",
     ],
     role: "UX/UI Designer",
-    year: "2025",
+    year: "2026",
     client: "Food Delivery",
     liveUrl:
       "https://www.figma.com/design/L9yaIAY5PGW4OwjYrX9A5q/Food-delivery?node-id=472-1927&t=NCgRDlAzJWnq0eXM-1",
@@ -107,7 +107,7 @@ export const projects: Project[] = [
       "Design System",
     ],
     role: "UX/UI Designer",
-    year: "2025",
+    year: "2026",
     client: "Home Cam",
     liveUrl:
       "https://www.figma.com/design/7BhycjxE1sxjm3Ly4RtyML/Booking-Hotel-and-rent-house?node-id=32-69&t=aVg9aNZ3NAuLAeqD-1",
@@ -124,21 +124,33 @@ export const projects: Project[] = [
   // Mobile App Project
 
   {
-    slug: "transport-mobile-app",
-    title: "Travel & Transport Mobile App Frontend",
+    slug: "ecommerce-mobile-app",
+    title: "E-commerce Mobile App Frontend",
     summary:
-      "I reconstructed the Transport and Travel mobile application using Flutter, enhancing functionality and user experience through advanced state management, and a pixel-perfect frontend.",
+      "I reconstructed the E-commerce mobile application using Flutter, enhancing functionality and user experience through advanced Getx state management , and a pixel-perfect frontend.",
+
+    // in this app has two user roles: customer and admin Push notification, intercrate aba payway, localization, saperate enviroment development, intergrate google map, and more features
     description: [
-      "Travel & Transport Mobile App is a mobile application for booking transportation and travel services.",
-      "The application features a user-friendly interface for booking transportation and travel services.",
+      "E-commerce Mobile App is a mobile application for online shopping and product discovery.",
+      "It allows users to browse products, add items to their cart, and make purchases directly from their mobile devices.",
+      "The application features a user - friendly interface for browsing products, managing orders, and tracking deliveries. ",
       "My role was to reconstruct and enhance this application by developing a robust Flutter frontend, implementing advanced state management with GetX, and integrating it with Firebase services for data persistence and user authentication.",
       "I focused on delivering a pixel-perfect, high-fidelity user interface that matches the original application's complete functionality while ensuring optimal performance and scalability.",
     ],
     category: "Mobile App",
-    tags: ["Flutter", "dart", "GetX State Management"],
+    tags: [
+      "GetX State Management",
+      "ABA Payway",
+      "Localization",
+      "Push Notification",
+      "Flutter",
+      "Google Map",
+      "Firebase",
+      "dart",
+    ],
     role: "Mobile App Developer",
-    year: "2025",
-    client: "Travel & Transport",
+    year: "April 2026 — September 2026",
+    client: "E-commerce App",
     repoUrl:
       "https://github.com/maoengsodung-dev/travel-transportation-frontend",
     coverImage: "/images/transport.png",
@@ -147,6 +159,32 @@ export const projects: Project[] = [
       "/images/ux1.png",
       "/images/ux2.png",
       "/images/ux3.png",
+    ],
+    featured: true,
+  },
+  {
+    slug: "find-hospital-mobile-app",
+    title: "Find Hospital Mobile App Frontend",
+    summary:
+      "I reconstructed the Find Hospital mobile application using Flutter, enhancing functionality and user experience through advanced state management, and a pixel-perfect frontend.",
+    description: [
+      "Find Hospital Mobile App is a mobile application for discovering nearby hospitals, clinics, and pharmacies.",
+      "The application features a user-friendly interface for discovering nearby hospitals, clinics, and pharmacies.",
+      "My role was to reconstruct and enhance this application by developing a robust Flutter frontend, implementing advanced state management with GetX, and integrating it with Firebase services for data persistence and user authentication.",
+      "I focused on delivering a pixel-perfect, high-fidelity user interface that matches the original application's complete functionality while ensuring optimal performance and scalability.",
+    ],
+    category: "Mobile App",
+    tags: ["Flutter", "dart", "GetX State Management"],
+    role: "Mobile App Developer",
+    year: "11 July - 19 July 2026",
+    client: "Find Hospital",
+    repoUrl: "https://github.com/maoengsodung-dev/Ecommerce-Frontend",
+    coverImage: "/images/cover.png",
+    gallery: [
+      "/images/cover.png",
+      "/images/ui1.png",
+      "/images/ui2.png",
+      "/images/ui3.png",
     ],
     featured: true,
   },

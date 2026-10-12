@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
@@ -32,6 +33,7 @@ export async function generateMetadata({
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
+      images: post.coverImage ? [{ url: post.coverImage }] : undefined,
     },
   };
 }
@@ -79,8 +81,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
 
-        <div className="relative mt-10 aspect-[16/8] w-full overflow-hidden rounded-3xl border border-border/60">
-          <MediaPlaceholder seed={post.slug} label={post.tags[0]} />
+        <div className="relative mt-10 aspect-[16/8] w-full overflow-hidden rounded-3xl border border-border/60 bg-muted">
+          {post.coverImage ? (
+            <Image
+              src={post.coverImage}
+              alt={post.title}
+              fill
+              priority
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="object-cover"
+              unoptimized={post.coverImage.endsWith(".svg")}
+            />
+          ) : (
+            <MediaPlaceholder seed={post.slug} label={post.tags[0]} />
+          )}
         </div>
 
         <div className="mt-12 max-w-none space-y-5 text-muted-foreground text-pretty">

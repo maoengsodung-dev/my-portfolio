@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -6,15 +7,29 @@ import { MediaPlaceholder } from "@/components/common/media-placeholder";
 import type { BlogPost } from "@/types";
 
 export function BlogCard({ post }: { post: BlogPost }) {
+  const hasCover = Boolean(post.coverImage);
+  const isSvg = post.coverImage?.endsWith(".svg");
+
   return (
     <Link
       href={`/blog/${post.slug}`}
       className="group flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card transition-colors hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
     >
-      <div className="relative aspect-[16/10] overflow-hidden">
-        <div className="size-full transition-transform duration-500 group-hover:scale-105">
-          <MediaPlaceholder seed={post.slug} label={post.tags[0]} />
-        </div>
+      <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+        {hasCover ? (
+          <Image
+            src={post.coverImage}
+            alt={post.title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            unoptimized={isSvg}
+          />
+        ) : (
+          <div className="size-full transition-transform duration-500 group-hover:scale-105">
+            <MediaPlaceholder seed={post.slug} label={post.tags[0]} />
+          </div>
+        )}
       </div>
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-center gap-2 font-mono text-xs text-muted-foreground">

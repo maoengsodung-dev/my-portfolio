@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad-ux" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0914" />
+      <stop offset="50%" stop-color="#140A12" />
+      <stop offset="100%" stop-color="#0A0B10" />
+    </linearGradient>
+
+    <!-- Radial Glows -->
+    <radialGradient id="glow-rose" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#F43F5E" stop-opacity="0.32" />
+      <stop offset="60%" stop-color="#E11D48" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-cyan-ux" cx="15%" cy="85%" r="40%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid-pattern-ux" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="1" />
+      <circle cx="40" cy="40" r="1" fill="rgba(255,255,255,0.08)" />
+    </pattern>
+
+    <!-- Emergency SOS Glow -->
+    <radialGradient id="sos-radial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="70%" stop-color="#DC2626" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </radialGradient>
+
+    <!-- Device Frame Gradient -->
+    <linearGradient id="device-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(244, 63, 94, 0.6)" />
+      <stop offset="50%" stop-color="rgba(255, 255, 255, 0.2)" />
+      <stop offset="100%" stop-color="rgba(6, 182, 212, 0.4)" />
+    </linearGradient>
+
+    <linearGradient id="rose-cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+
+    <filter id="shadow-device" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg-grad-ux)" />
+  <rect width="1280" height="720" fill="url(#glow-rose)" />
+  <rect width="1280" height="720" fill="url(#glow-cyan-ux)" />
+  <rect width="1280" height="720" fill="url(#grid-pattern-ux)" />
+
+  <!-- Radar / Beacon Rings in Center -->
+  <g transform="translate(640, 420)" opacity="0.4">
+    <circle cx="0" cy="0" r="120" stroke="#F43F5E" stroke-width="1.5" stroke-dasharray="4 6" />
+    <circle cx="0" cy="0" r="220" stroke="#F43F5E" stroke-width="1" stroke-dasharray="8 8" opacity="0.6" />
+    <circle cx="0" cy="0" r="320" stroke="#F43F5E" stroke-width="1" opacity="0.3" />
+  </g>
+
+  <!-- Top Title Area -->
+  <g transform="translate(80, 70)">
+    <rect x="0" y="0" width="160" height="28" rx="14" fill="rgba(244, 63, 94, 0.15)" stroke="rgba(244, 63, 94, 0.35)" stroke-width="1" />
+    <circle cx="14" cy="14" r="4" fill="#F43F5E" />
+    <text x="26" y="18" fill="#FB7185" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="1">UI/UX CASE STUDY</text>
+
+    <text x="0" y="65" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.5">Emergency Mobile UX Architecture</text>
+    <text x="0" y="98" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400">Designing high-urgency ergonomics, instant hospital navigation &amp; rapid SOS flows</text>
+  </g>
+
+  <!-- Figma Design Icon Top Right -->
+  <g transform="translate(1130, 60)" opacity="0.85">
+    <rect x="0" y="0" width="70" height="70" rx="18" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+    <!-- Figma colored icons -->
+    <circle cx="27" cy="27" r="8" fill="#F24E1E" />
+    <circle cx="43" cy="27" r="8" fill="#FF7262" />
+    <circle cx="27" cy="43" r="8" fill="#A259FF" />
+    <circle cx="43" cy="43" r="8" fill="#1ABCFE" />
+    <circle cx="27" cy="55" r="5" fill="#0ACF83" />
+  </g>
+
+  <!-- LEFT COLUMN: UX HEURISTICS / PRINCIPLES -->
+  <g transform="translate(80, 220)">
+    <!-- Heuristic Card 1 -->
+    <g filter="url(#shadow-device)">
+      <rect x="0" y="0" width="310" height="116" rx="20" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(244, 63, 94, 0.25)" stroke-width="1.2" />
+      <circle cx="36" cy="36" r="16" fill="rgba(244, 63, 94, 0.15)" />
+      <!-- Bell / Alert Icon -->
+      <path d="M 36 28 C 32 28 30 31 30 35 L 30 40 L 28 42 L 44 42 L 42 40 L 42 35 C 42 31 40 28 36 28 Z" fill="#F43F5E" />
+      <circle cx="36" cy="45" r="1.5" fill="#F43F5E" />
+      <text x="64" y="36" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600">Zero Friction SOS</text>
+      <text x="64" y="52" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Single-swipe trigger with 3s cancel</text>
+      
+      <rect x="20" y="74" width="270" height="26" rx="8" fill="rgba(255,255,255,0.04)" />
+      <text x="32" y="91" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Heuristic: Prevent Panic Errors</text>
+    </g>
+
+    <!-- Heuristic Card 2 -->
+    <g transform="translate(0, 136)" filter="url(#shadow-device)">
+      <rect x="0" y="0" width="310" height="116" rx="20" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(6, 182, 212, 0.25)" stroke-width="1.2" />
+      <circle cx="36" cy="36" r="16" fill="rgba(6, 182, 212, 0.15)" />
+      <!-- Location Pin -->
+      <path d="M 36 26 C 32 26 29 29 29 33 C 29 38 36 45 36 45 C 36 45 43 38 43 33 C 43 29 40 26 36 26 Z" fill="#06B6D4" />
+      <circle cx="36" cy="33" r="2.5" fill="#080B13" />
+      <text x="64" y="36" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600">Dynamic Facility Routing</text>
+      <text x="64" y="52" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Real-time distance &amp; ER readiness</text>
+
+      <rect x="20" y="74" width="270" height="26" rx="8" fill="rgba(255,255,255,0.04)" />
+      <text x="32" y="91" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Live Operating Status: Open 24/7</text>
+    </g>
+
+    <!-- Heuristic Card 3 -->
+    <g transform="translate(0, 272)" filter="url(#shadow-device)">
+      <rect x="0" y="0" width="310" height="116" rx="20" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(245, 158, 11, 0.25)" stroke-width="1.2" />
+      <circle cx="36" cy="36" r="16" fill="rgba(245, 158, 11, 0.15)" />
+      <!-- Eye / Contrast Icon -->
+      <circle cx="36" cy="36" r="8" fill="none" stroke="#F59E0B" stroke-width="2" />
+      <circle cx="36" cy="36" r="3.5" fill="#F59E0B" />
+      <text x="64" y="36" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600">High Contrast (WCAG)</text>
+      <text x="64" y="52" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">7:1 ratio for sunlight readability</text>
+
+      <rect x="20" y="74" width="270" height="26" rx="8" fill="rgba(255,255,255,0.04)" />
+      <text x="32" y="91" fill="#F59E0B" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Accessible Color Blind Safe</text>
+    </g>
+  </g>
+
+  <!-- CENTER: SMARTPHONE UI PROTOTYPE -->
+  <g transform="translate(480, 180)" filter="url(#shadow-device)">
+    <!-- Device Outer Body -->
+    <rect x="0" y="0" width="320" height="490" rx="36" fill="#070B14" stroke="url(#device-border)" stroke-width="2.5" />
+    
+    <!-- Dynamic Island / Speaker -->
+    <rect x="110" y="14" width="100" height="18" rx="9" fill="#000000" />
+    <circle cx="195" cy="23" r="3" fill="#1E293B" />
+
+    <!-- App Header Inside Screen -->
+    <g transform="translate(20, 48)">
+      <text x="0" y="16" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">CURRENT LOCATION</text>
+      <text x="0" y="34" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">Phnom Penh • Doun Penh</text>
+
+      <!-- SOS Swipe Action Card -->
+      <g transform="translate(0, 46)">
+        <rect x="0" y="0" width="280" height="96" rx="18" fill="url(#sos-radial)" />
+        <circle cx="48" cy="48" r="26" fill="rgba(255,255,255,0.2)" />
+        <!-- Cross / Medical Icon -->
+        <rect x="44" y="34" width="8" height="28" rx="2" fill="#FFFFFF" />
+        <rect x="34" y="44" width="28" height="8" rx="2" fill="#FFFFFF" />
+        
+        <text x="90" y="42" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800">EMERGENCY SOS</text>
+        <text x="90" y="60" fill="rgba(255,255,255,0.85)" font-family="system-ui, -apple-system, sans-serif" font-size="12">Swipe right to dispatch help</text>
+
+        <rect x="90" y="70" width="160" height="6" rx="3" fill="rgba(255,255,255,0.3)" />
+        <rect x="90" y="70" width="55" height="6" rx="3" fill="#FFFFFF" />
+      </g>
+
+      <!-- Nearby Facilities List -->
+      <g transform="translate(0, 158)">
+        <text x="0" y="16" fill="#F1F5F9" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">NEARBY HOSPITALS (3)</text>
+
+        <!-- Hospital Card 1 -->
+        <g transform="translate(0, 26)">
+          <rect x="0" y="0" width="280" height="74" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(244, 63, 94, 0.3)" stroke-width="1" />
+          <circle cx="28" cy="37" r="14" fill="rgba(244, 63, 94, 0.15)" />
+          <path d="M 28 30 L 28 44 M 21 37 L 35 37" stroke="#F43F5E" stroke-width="2.5" stroke-linecap="round" />
+
+          <text x="52" y="30" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Calmette Hospital</text>
+          <text x="52" y="46" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">National ER • 24/7 Trauma</text>
+          
+          <rect x="52" y="52" width="75" height="16" rx="4" fill="rgba(16, 185, 129, 0.15)" />
+          <text x="57" y="64" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600">1.2 km • 4 min</text>
+
+          <rect x="210" y="24" width="58" height="28" rx="8" fill="#F43F5E" />
+          <text x="239" y="42" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">CALL</text>
+        </g>
+
+        <!-- Hospital Card 2 -->
+        <g transform="translate(0, 110)">
+          <rect x="0" y="0" width="280" height="74" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+          <circle cx="28" cy="37" r="14" fill="rgba(6, 182, 212, 0.15)" />
+          <path d="M 28 30 L 28 44 M 21 37 L 35 37" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" />
+
+          <text x="52" y="30" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Royal Phnom Penh</text>
+          <text x="52" y="46" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">General &amp; Cardiology Unit</text>
+
+          <rect x="52" y="52" width="75" height="16" rx="4" fill="rgba(16, 185, 129, 0.15)" />
+          <text x="57" y="64" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600">2.8 km • 9 min</text>
+
+          <rect x="210" y="24" width="58" height="28" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+          <text x="239" y="42" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">NAV</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: FIGMA DESIGN SYSTEM TOKENS -->
+  <g transform="translate(850, 220)">
+    <!-- Design Tokens Box -->
+    <g filter="url(#shadow-device)">
+      <rect x="0" y="0" width="350" height="388" rx="24" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2" />
+
+      <g transform="translate(28, 28)">
+        <text x="0" y="16" fill="#F43F5E" font-family="monospace" font-size="11" font-weight="700">DESIGN SYSTEM TOKENS</text>
+        <text x="0" y="42" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">Urgency Color Palette</text>
+        <text x="0" y="64" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12.5">Calibrated for stress states and low light</text>
+
+        <!-- Swatch 1: Critical -->
+        <g transform="translate(0, 86)">
+          <rect x="0" y="0" width="36" height="36" rx="10" fill="#EF4444" />
+          <text x="48" y="18" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Critical Red</text>
+          <text x="48" y="32" fill="#94A3B8" font-family="monospace" font-size="11">#EF4444 • SOS Trigger</text>
+        </g>
+
+        <!-- Swatch 2: Warning -->
+        <g transform="translate(0, 136)">
+          <rect x="0" y="0" width="36" height="36" rx="10" fill="#F59E0B" />
+          <text x="48" y="18" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Caution Amber</text>
+          <text x="48" y="32" fill="#94A3B8" font-family="monospace" font-size="11">#F59E0B • Wait Times</text>
+        </g>
+
+        <!-- Swatch 3: Safe / Available -->
+        <g transform="translate(0, 186)">
+          <rect x="0" y="0" width="36" height="36" rx="10" fill="#10B981" />
+          <text x="48" y="18" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Safe Emerald</text>
+          <text x="48" y="32" fill="#94A3B8" font-family="monospace" font-size="11">#10B981 • Verified Open</text>
+        </g>
+
+        <!-- Touch Targets Metric -->
+        <g transform="translate(0, 246)">
+          <rect x="0" y="0" width="294" height="60" rx="14" fill="#0A0F1D" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+          <text x="18" y="26" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">Minimum Touch Target: 56px</text>
+          <text x="18" y="44" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11">Enhanced for trembling or one-handed grip</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Gradient -->
+  <rect x="0" y="714" width="1280" height="6" fill="url(#rose-cyan-grad)" />
+</svg>

@@ -2,49 +2,54 @@ import type { BlogPost } from "@/types";
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "smooth-scroll-without-jank",
-    title: "Building Smooth Scroll Without the Jank",
+    slug: "flutter-riverpod-vs-getx",
+    title: "Flutter State Management: Riverpod vs GetX",
     excerpt:
-      "How to pair Lenis with GSAP ScrollTrigger without fighting two competing render loops.",
-    date: "2025-11-02",
-    readingTime: "6 min read",
-    tags: ["Performance", "GSAP", "Animation"],
-    coverImage: "/blog/smooth-scroll.svg",
-    content: [
-      "Smooth-scroll libraries and scroll-triggered animation libraries both want to own the scroll position — and that's exactly where most implementations start to jank.",
-      "The fix is to pick one source of truth. Lenis intercepts wheel and touch input and computes a virtual scroll position; GSAP's ScrollTrigger should simply read that position instead of listening to the native scroll event.",
-      "In practice: disable Lenis' internal rAF loop, drive it from GSAP's ticker instead, and forward Lenis' scroll event to `ScrollTrigger.update()`. One loop, one source of truth, zero fighting.",
-      "The last piece is respecting `prefers-reduced-motion`. Smooth scrolling is a nice-to-have, not a requirement — always ship a native-scroll fallback.",
-    ],
-  },
-  {
-    slug: "designing-for-dark-mode-first",
-    title: "Designing for Dark Mode First",
-    excerpt:
-      "Why treating dark mode as the primary theme — not an afterthought — changes your entire color system.",
-    date: "2025-09-18",
-    readingTime: "5 min read",
-    tags: ["Design Systems", "Accessibility"],
-    coverImage: "/blog/dark-mode.svg",
-    content: [
-      "Most design systems start in light mode and bolt on a dark theme later. The result is usually low-contrast text and shadows that do nothing on a black background.",
-      "Starting dark-first forces better decisions early: shadows become subtle borders and glows, surfaces get real elevation via layered opacity, and contrast is checked against WCAG AA from day one instead of retrofitted.",
-      "The light theme, when you do build it, tends to be better too — because your token system was never allowed to rely on tricks that only work on white.",
-    ],
-  },
-  {
-    slug: "server-actions-in-practice",
-    title: "Server Actions in Practice: A Contact Form Case Study",
-    excerpt:
-      "A walkthrough of building a fully validated, progressively-enhanced contact form with Server Actions.",
-    date: "2025-07-04",
+      "Exploring two popular Flutter state management approaches, including their architecture, dependency management, and practical use cases.",
+    date: "2026-10-12",
     readingTime: "7 min read",
-    tags: ["Next.js", "Forms", "TypeScript"],
-    coverImage: "/blog/server-actions.svg",
+    tags: ["Flutter", "Riverpod", "GetX", "State Management"],
+    coverImage: "/blog/flutter-riverpod-vs-getx.svg",
     content: [
-      "Server Actions collapse what used to be an API route, a fetch call, and a loading state into a single function — but the ergonomics only shine once validation and error states are handled properly.",
-      "Validating on the server with Zod is non-negotiable: client validation is a UX nicety, not a security boundary. Every Server Action should re-validate its inputs.",
-      "Pairing `useActionState` for structured error state with `useFormStatus` for pending UI gives you a form that works even before JavaScript finishes loading — true progressive enhancement.",
+      "State management is an important part of building maintainable Flutter applications. As an application grows, managing loading states, API responses, user interactions, and shared data becomes more challenging.",
+      "Riverpod provides a provider-based approach to managing application state and separating business logic from the UI. It offers tools for handling asynchronous operations, testing providers, and organizing data dependencies.",
+      "GetX provides reactive state management, dependency injection, and navigation utilities. Its reactive approach can make it convenient to update widgets when observable values change, particularly when using Obx.",
+      "Both approaches can work well in production applications. The right choice depends on project requirements, team preferences, testing strategy, and architectural needs. Consistent organization and clear separation of responsibilities matter more than choosing a library based on popularity alone.",
+      "When building an e-commerce application, consider how product lists, cart contents, authentication, and checkout states interact. Choose a state management approach that keeps these features predictable, testable, and easy to maintain.",
+    ],
+  },
+  {
+    slug: "integrating-flutter-with-laravel-rest-api",
+    title: "Connecting Flutter to a Laravel REST API with Dio",
+    excerpt:
+      "A practical guide to API integration, Bearer token authentication, JSON responses, error handling, and image uploads in Flutter.",
+    date: "2026-09-20",
+    readingTime: "8 min read",
+    tags: ["Flutter", "Laravel", "REST API", "Dio", "HTTP"],
+    coverImage: "/blog/flutter-laravel-api.svg",
+    content: [
+      "Many mobile applications rely on a backend to retrieve data, authenticate users, and manage business operations. Connecting Flutter to a Laravel REST API creates a clear separation between the mobile interface and backend logic.",
+      "Dio is an HTTP client for Dart that supports request configuration, interceptors, timeouts, and multipart form data. A shared Dio client can centralize the API base URL, common headers, and request behavior instead of duplicating configuration across repositories.",
+      "For authenticated endpoints, a mobile application can attach a Bearer token to requests when required by the API. Interceptors can help manage headers and logging, but sensitive credentials should never be printed in production logs. The backend must still validate the token and enforce authorization.",
+      "API handling should cover more than successful responses. Network failures, expired credentials, validation errors, unexpected response formats, and server errors should be handled explicitly so the UI can show useful feedback to users.",
+      "For image uploads, Dio supports MultipartFile and FormData. Make sure the Laravel endpoint validates uploaded files, enforces appropriate size and file-type limits, and returns a consistent response format. Keeping HTTP logic inside a service or repository also makes the application easier to test and maintain.",
+    ],
+  },
+  {
+    slug: "designing-mobile-ux-for-emergencies",
+    title: "Designing Mobile Experiences for Emergency Situations",
+    excerpt:
+      "How clear navigation, accessible interfaces, location-based features, and thoughtful user flows can make emergency-support concepts easier to use.",
+    date: "2026-07-11",
+    readingTime: "6 min read",
+    tags: ["UI/UX Design", "Figma", "Accessibility", "Mobile Design"],
+    coverImage: "/blog/emergency-mobile-ux.svg",
+    content: [
+      "Mobile interfaces designed for emergencies need to help users find essential information quickly. Complex navigation, unclear labels, and crowded screens can make important actions harder to identify when users are under stress.",
+      "For a hospital finder concept, start by mapping the main user journeys: finding nearby hospitals, viewing contact information, opening directions, and accessing emergency contacts. Organize these journeys around the tasks users need to complete rather than the internal structure of the application.",
+      "Visual hierarchy is especially important. Clear action labels, readable typography, consistent spacing, and strong contrast help make information easier to scan. Important actions should be identifiable without relying on color alone, and touch targets should be comfortable to use.",
+      "Location features should communicate their limitations clearly. Explain when location permission is needed, provide a useful fallback when permission is denied, and give users a way to select a location manually. Hospital information should also be kept accurate and regularly verified.",
+      "Prototyping in Figma can help validate user flows before implementation begins. Test whether users can complete key tasks, understand the available actions, and recover from errors. In emergency-support products, accessibility, clarity, and trustworthy information are essential design considerations.",
     ],
   },
 ];

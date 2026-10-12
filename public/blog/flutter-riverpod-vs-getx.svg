@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C15" />
+      <stop offset="50%" stop-color="#0B132B" />
+      <stop offset="100%" stop-color="#070A12" />
+    </linearGradient>
+
+    <!-- Glowing Orbs -->
+    <radialGradient id="glow-cyan" cx="25%" cy="35%" r="45%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.38" />
+      <stop offset="50%" stop-color="#0284C7" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-purple" cx="75%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.32" />
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="1" />
+      <circle cx="40" cy="40" r="1" fill="rgba(255,255,255,0.08)" />
+    </pattern>
+
+    <!-- Card Gradients -->
+    <linearGradient id="riverpod-card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#0369A1" stop-opacity="0.04" />
+    </linearGradient>
+    <linearGradient id="getx-card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#6D28D9" stop-opacity="0.04" />
+    </linearGradient>
+
+    <linearGradient id="badge-riverpod" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="badge-getx" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+
+    <linearGradient id="vs-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+
+    <filter id="card-blur" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+    <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1280" height="720" fill="url(#bg-grad)" />
+  <rect width="1280" height="720" fill="url(#glow-cyan)" />
+  <rect width="1280" height="720" fill="url(#glow-purple)" />
+  <rect width="1280" height="720" fill="url(#grid-pattern)" />
+
+  <!-- Background Ambient Lines -->
+  <path d="M 0 540 Q 340 460 640 520 T 1280 480" fill="none" stroke="rgba(56, 189, 248, 0.12)" stroke-width="2" />
+  <path d="M 0 580 Q 400 620 740 540 T 1280 600" fill="none" stroke="rgba(168, 85, 247, 0.1)" stroke-width="2" />
+
+  <!-- Top Category Tag & Title -->
+  <g transform="translate(80, 70)">
+    <rect x="0" y="0" width="132" height="28" rx="14" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <circle cx="14" cy="14" r="4" fill="#38BDF8" />
+    <text x="26" y="18" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="1">FLUTTER DEV</text>
+
+    <text x="0" y="65" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.5">State Management Architecture</text>
+    <text x="0" y="98" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400">Comparing reactive paradigms, testability &amp; scalable separation of concerns</text>
+  </g>
+
+  <!-- Flutter Logo Stylized in Header -->
+  <g transform="translate(1120, 70)" opacity="0.85">
+    <path d="M 45 0 L 0 45 L 14 59 L 73 0 Z" fill="#38BDF8" />
+    <path d="M 28 45 L 0 73 L 14 87 L 42 59 Z" fill="#0284C7" />
+    <path d="M 42 59 L 56 73 L 70 59 L 56 45 Z" fill="#0369A1" />
+    <path d="M 42 59 L 70 87 L 84 73 L 56 45 Z" fill="#38BDF8" />
+  </g>
+
+  <!-- CENTER VS BADGE -->
+  <g transform="translate(640, 420)">
+    <circle cx="0" cy="0" r="32" fill="#0F172A" stroke="url(#vs-glow)" stroke-width="2.5" filter="url(#card-blur)" />
+    <circle cx="0" cy="0" r="24" fill="url(#vs-glow)" fill-opacity="0.15" />
+    <text x="0" y="8" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" letter-spacing="1.5">VS</text>
+  </g>
+
+  <!-- LEFT CARD: RIVERPOD -->
+  <g transform="translate(100, 220)" filter="url(#card-blur)">
+    <!-- Glass Container -->
+    <rect x="0" y="0" width="480" height="400" rx="24" fill="url(#riverpod-card-grad)" stroke="rgba(56, 189, 248, 0.28)" stroke-width="1.5" />
+    
+    <!-- Top Header in Card -->
+    <rect x="28" y="28" width="112" height="32" rx="16" fill="url(#badge-riverpod)" />
+    <text x="84" y="49" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">RIVERPOD</text>
+    <text x="154" y="50" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">Provider Scope</text>
+
+    <text x="28" y="90" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="400">Compile-safe, decoupled &amp; asynchronous caching</text>
+
+    <!-- Code / Concept Box -->
+    <rect x="28" y="112" width="424" height="152" rx="14" fill="#050B14" stroke="rgba(56, 189, 248, 0.15)" stroke-width="1" />
+    <circle cx="48" cy="132" r="4.5" fill="#EF4444" opacity="0.7" />
+    <circle cx="62" cy="132" r="4.5" fill="#F59E0B" opacity="0.7" />
+    <circle cx="76" cy="132" r="4.5" fill="#10B981" opacity="0.7" />
+    <text x="390" y="135" fill="#64748B" font-family="monospace" font-size="11">provider.dart</text>
+
+    <text x="44" y="165" fill="#38BDF8" font-family="monospace" font-size="13">final</text>
+    <text x="90" y="165" fill="#E2E8F0" font-family="monospace" font-size="13">cartProvider =</text>
+    <text x="220" y="165" fill="#38BDF8" font-family="monospace" font-size="13">AsyncNotifierProvider</text>
+    <text x="44" y="192" fill="#E2E8F0" font-family="monospace" font-size="13">  &lt;CartNotifier, List&lt;Item&gt;&gt;(CartNotifier.new);</text>
+
+    <text x="44" y="232" fill="#64748B" font-family="monospace" font-size="12">// UI Consumer:</text>
+    <text x="44" y="250" fill="#F1F5F9" font-family="monospace" font-size="13"><tspan fill="#A855F7">final</tspan> state = ref.<tspan fill="#38BDF8">watch</tspan>(cartProvider);</text>
+
+    <!-- Strengths Badges -->
+    <g transform="translate(28, 286)">
+      <rect x="0" y="0" width="132" height="34" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <circle cx="16" cy="17" r="4" fill="#10B981" />
+      <text x="28" y="22" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">Zero BuildContext</text>
+
+      <rect x="144" y="0" width="132" height="34" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <circle cx="160" cy="17" r="4" fill="#10B981" />
+      <text x="172" y="22" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">Auto Disposable</text>
+
+      <rect x="288" y="0" width="136" height="34" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <circle cx="304" cy="17" r="4" fill="#10B981" />
+      <text x="316" y="22" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">100% Mockable</text>
+    </g>
+
+    <!-- Interactive Status Bar -->
+    <g transform="translate(28, 340)">
+      <text x="0" y="20" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1">ARCHITECTURAL FOCUS</text>
+      <rect x="150" y="11" width="270" height="8" rx="4" fill="rgba(255,255,255,0.06)" />
+      <rect x="150" y="11" width="245" height="8" rx="4" fill="url(#badge-riverpod)" />
+    </g>
+  </g>
+
+  <!-- RIGHT CARD: GETX -->
+  <g transform="translate(700, 220)" filter="url(#card-blur)">
+    <!-- Glass Container -->
+    <rect x="0" y="0" width="480" height="400" rx="24" fill="url(#getx-card-grad)" stroke="rgba(168, 85, 247, 0.28)" stroke-width="1.5" />
+
+    <!-- Top Header in Card -->
+    <rect x="28" y="28" width="88" height="32" rx="16" fill="url(#badge-getx)" />
+    <text x="72" y="49" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">GETX</text>
+    <text x="130" y="50" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">Reactive Controller</text>
+
+    <text x="28" y="90" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="400">Micro-reactive bindings, route manager &amp; quick DI</text>
+
+    <!-- Code / Concept Box -->
+    <rect x="28" y="112" width="424" height="152" rx="14" fill="#080714" stroke="rgba(168, 85, 247, 0.15)" stroke-width="1" />
+    <circle cx="48" cy="132" r="4.5" fill="#EF4444" opacity="0.7" />
+    <circle cx="62" cy="132" r="4.5" fill="#F59E0B" opacity="0.7" />
+    <circle cx="76" cy="132" r="4.5" fill="#10B981" opacity="0.7" />
+    <text x="382" y="135" fill="#64748B" font-family="monospace" font-size="11">controller.dart</text>
+
+    <text x="44" y="165" fill="#A855F7" font-family="monospace" font-size="13">class</text>
+    <text x="90" y="165" fill="#E2E8F0" font-family="monospace" font-size="13">CartController</text>
+    <text x="210" y="165" fill="#A855F7" font-family="monospace" font-size="13">extends</text>
+    <text x="274" y="165" fill="#38BDF8" font-family="monospace" font-size="13">GetxController</text>
+    <text x="44" y="192" fill="#E2E8F0" font-family="monospace" font-size="13">  <tspan fill="#38BDF8">var</tspan> count = 0.<tspan fill="#F43F5E">obs</tspan>;</text>
+
+    <text x="44" y="232" fill="#64748B" font-family="monospace" font-size="12">// UI Observer:</text>
+    <text x="44" y="250" fill="#F1F5F9" font-family="monospace" font-size="13"><tspan fill="#A855F7">Obx</tspan>(() =&gt; Text(<tspan fill="#38BDF8">"${c.count}"</tspan>))</text>
+
+    <!-- Strengths Badges -->
+    <g transform="translate(28, 286)">
+      <rect x="0" y="0" width="132" height="34" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <circle cx="16" cy="17" r="4" fill="#A855F7" />
+      <text x="28" y="22" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">Ultra Fast Setup</text>
+
+      <rect x="144" y="0" width="132" height="34" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <circle cx="160" cy="17" r="4" fill="#A855F7" />
+      <text x="172" y="22" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">Built-in Routing</text>
+
+      <rect x="288" y="0" width="136" height="34" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <circle cx="304" cy="17" r="4" fill="#A855F7" />
+      <text x="316" y="22" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">Dependency Get.put</text>
+    </g>
+
+    <!-- Interactive Status Bar -->
+    <g transform="translate(28, 340)">
+      <text x="0" y="20" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1">VELOCITY FOCUS</text>
+      <rect x="120" y="11" width="300" height="8" rx="4" fill="rgba(255,255,255,0.06)" />
+      <rect x="120" y="11" width="280" height="8" rx="4" fill="url(#badge-getx)" />
+    </g>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <rect x="0" y="714" width="1280" height="6" fill="url(#badge-riverpod)" />
+</svg>

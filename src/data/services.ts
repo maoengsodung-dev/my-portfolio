@@ -2,51 +2,51 @@ import type { ServiceItem } from "@/types";
 
 export const services: ServiceItem[] = [
   {
-    id: "product-frontend",
-    icon: "LayoutGrid",
-    title: "Product Frontend Engineering",
+    id: "mobile-app-development",
+    icon: "Smartphone",
+    title: "Mobile App Development",
     description:
-      "End-to-end ownership of complex, data-heavy interfaces — from architecture to pixel-level polish.",
+      "Building responsive, user-friendly mobile applications with Flutter, reusable UI components, and maintainable architecture.",
     features: [
-      "Next.js / React application architecture",
-      "Design system implementation",
-      "State management & data fetching strategy",
+      "Flutter & Dart application development",
+      "State management with GetX and Riverpod",
+      "Responsive layouts and reusable widgets",
     ],
   },
   {
-    id: "marketing-sites",
-    icon: "Rocket",
-    title: "High-Performance Marketing Sites",
+    id: "api-backend-integration",
+    icon: "Cloud",
+    title: "API & Backend Integration",
     description:
-      "Fast, animated, conversion-focused sites that score 90+ on Lighthouse without sacrificing motion or polish.",
+      "Connecting mobile applications to reliable backend services through REST APIs, Firebase, and secure data-handling workflows.",
     features: [
-      "Scroll-driven storytelling & micro-interactions",
-      "Core Web Vitals optimization",
-      "SEO & Open Graph setup",
+      "Laravel REST API integration with Dio and http",
+      "Firebase Authentication, Firestore, and FCM",
+      "JSON parsing, token authentication, and error handling",
     ],
   },
   {
-    id: "design-systems",
-    icon: "Component",
-    title: "Design Systems & UI Libraries",
+    id: "ui-ux-design",
+    icon: "Figma",
+    title: "UI/UX Design & Prototyping",
     description:
-      "Reusable, accessible component libraries that keep design and engineering in sync as products scale.",
+      "Turning ideas into intuitive mobile experiences through user flows, wireframes, interactive prototypes, and thoughtful interface design.",
     features: [
-      "Token-based theming (light/dark, brand variants)",
-      "Documented components in Storybook",
-      "Accessibility audits (WCAG AA)",
+      "Figma wireframes and interactive prototypes",
+      "User flows and mobile interface design",
+      "Usability, accessibility, and visual consistency",
     ],
   },
   {
-    id: "consulting",
-    icon: "Compass",
-    title: "Technical Consulting & Audits",
+    id: "app-maintenance",
+    icon: "Settings",
+    title: "App Optimization & Maintenance",
     description:
-      "A focused audit of your frontend — performance, accessibility, architecture — with a prioritized action plan.",
+      "Improving existing mobile applications through debugging, code refactoring, UI refinement, and practical development improvements.",
     features: [
-      "Performance & bundle-size audits",
-      "Accessibility & UX review",
-      "Codebase health assessment",
+      "Debugging and troubleshooting",
+      "Code organization and maintainability improvements",
+      "Responsive UI refinement and API error handling",
     ],
   },
 ];

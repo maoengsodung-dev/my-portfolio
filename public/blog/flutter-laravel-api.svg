@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad-api" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B13" />
+      <stop offset="50%" stop-color="#110E1C" />
+      <stop offset="100%" stop-color="#090A12" />
+    </linearGradient>
+
+    <!-- Radial Glows -->
+    <radialGradient id="glow-flutter" cx="20%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.32" />
+      <stop offset="60%" stop-color="#0284C7" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-laravel" cx="80%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#FF2D20" stop-opacity="0.28" />
+      <stop offset="60%" stop-color="#E11D48" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#FF2D20" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-dio" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid-pattern-api" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="1" />
+      <circle cx="40" cy="40" r="1" fill="rgba(255,255,255,0.08)" />
+    </pattern>
+
+    <!-- Card Gradients -->
+    <linearGradient id="flutter-box-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#0369A1" stop-opacity="0.03" />
+    </linearGradient>
+    <linearGradient id="laravel-box-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2D20" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#BE123C" stop-opacity="0.03" />
+    </linearGradient>
+    <linearGradient id="dio-badge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+    <linearGradient id="pipeline-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#FF2D20" />
+    </linearGradient>
+
+    <filter id="shadow-elevated" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1280" height="720" fill="url(#bg-grad-api)" />
+  <rect width="1280" height="720" fill="url(#glow-flutter)" />
+  <rect width="1280" height="720" fill="url(#glow-laravel)" />
+  <rect width="1280" height="720" fill="url(#glow-dio)" />
+  <rect width="1280" height="720" fill="url(#grid-pattern-api)" />
+
+  <!-- Flowing Network Waves -->
+  <path d="M 0 520 C 320 440 440 600 700 480 C 960 360 1100 560 1280 500" fill="none" stroke="rgba(139, 92, 246, 0.15)" stroke-width="2" />
+  <path d="M 0 580 C 300 540 500 420 760 560 C 1020 700 1120 440 1280 560" fill="none" stroke="rgba(255, 45, 32, 0.1)" stroke-width="2" />
+
+  <!-- Top Title Area -->
+  <g transform="translate(80, 70)">
+    <rect x="0" y="0" width="168" height="28" rx="14" fill="rgba(168, 85, 247, 0.15)" stroke="rgba(168, 85, 247, 0.35)" stroke-width="1" />
+    <circle cx="14" cy="14" r="4" fill="#A855F7" />
+    <text x="26" y="18" fill="#C084FC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="1">FULLSTACK API</text>
+
+    <text x="0" y="65" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.5">Flutter &amp; Laravel REST Integration</text>
+    <text x="0" y="98" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400">Robust HTTP networking with Dio, Bearer token interceptors &amp; multipart uploads</text>
+  </g>
+
+  <!-- Laravel Logo Stylized Top Right -->
+  <g transform="translate(1130, 60)" opacity="0.85">
+    <rect x="0" y="0" width="70" height="70" rx="18" fill="rgba(255, 45, 32, 0.12)" stroke="rgba(255, 45, 32, 0.3)" stroke-width="1" />
+    <path d="M 20 22 L 35 15 L 50 22 L 50 48 L 35 55 L 20 48 Z" fill="none" stroke="#FF2D20" stroke-width="2.5" />
+    <path d="M 20 22 L 35 30 L 50 22" fill="none" stroke="#FF2D20" stroke-width="2" />
+    <path d="M 35 30 L 35 55" fill="none" stroke="#FF2D20" stroke-width="2" />
+  </g>
+
+  <!-- LEFT PANEL: FLUTTER + DIO CLIENT -->
+  <g transform="translate(80, 220)" filter="url(#shadow-elevated)">
+    <rect x="0" y="0" width="460" height="400" rx="24" fill="url(#flutter-box-grad)" stroke="rgba(56, 189, 248, 0.28)" stroke-width="1.5" />
+
+    <g transform="translate(28, 28)">
+      <rect x="0" y="0" width="108" height="30" rx="15" fill="rgba(56, 189, 248, 0.15)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1" />
+      <text x="54" y="19" text-anchor="middle" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">FLUTTER APP</text>
+      <text x="122" y="21" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">Dio HTTP Service</text>
+    </g>
+
+    <text x="28" y="86" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Client-side networking &amp; token persistence</text>
+
+    <!-- Code Block -->
+    <rect x="28" y="108" width="404" height="172" rx="14" fill="#040812" stroke="rgba(56, 189, 248, 0.18)" stroke-width="1" />
+    <circle cx="48" cy="128" r="4.5" fill="#EF4444" opacity="0.7" />
+    <circle cx="62" cy="128" r="4.5" fill="#F59E0B" opacity="0.7" />
+    <circle cx="76" cy="128" r="4.5" fill="#10B981" opacity="0.7" />
+    <text x="340" y="130" fill="#64748B" font-family="monospace" font-size="11">api_client.dart</text>
+
+    <text x="44" y="160" fill="#A855F7" font-family="monospace" font-size="12.5">dio.interceptors.add(</text>
+    <text x="54" y="184" fill="#38BDF8" font-family="monospace" font-size="12.5">InterceptorsWrapper(</text>
+    <text x="64" y="208" fill="#94A3B8" font-family="monospace" font-size="12">onRequest: (options, handler) {</text>
+    <text x="74" y="230" fill="#F1F5F9" font-family="monospace" font-size="12">options.headers[<tspan fill="#34D399">'Authorization'</tspan>] =</text>
+    <text x="84" y="252" fill="#F1F5F9" font-family="monospace" font-size="12"><tspan fill="#38BDF8">'Bearer $token'</tspan>;</text>
+    <text x="44" y="270" fill="#A855F7" font-family="monospace" font-size="12.5">));</text>
+
+    <!-- Features Pill Row -->
+    <g transform="translate(28, 302)">
+      <rect x="0" y="0" width="124" height="32" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" />
+      <circle cx="16" cy="16" r="3.5" fill="#38BDF8" />
+      <text x="26" y="20" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500">MultipartFile</text>
+
+      <rect x="134" y="0" width="124" height="32" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" />
+      <circle cx="150" cy="16" r="3.5" fill="#38BDF8" />
+      <text x="160" y="20" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500">JWT Interceptor</text>
+
+      <rect x="268" y="0" width="136" height="32" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" />
+      <circle cx="284" cy="16" r="3.5" fill="#38BDF8" />
+      <text x="294" y="20" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500">BaseOptions Timeout</text>
+    </g>
+
+    <!-- Connection State -->
+    <g transform="translate(28, 354)">
+      <circle cx="8" cy="10" r="4.5" fill="#10B981" />
+      <text x="22" y="14" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">DIO CLIENT READY</text>
+      <text x="280" y="14" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="12">BaseURL: /api/v1</text>
+    </g>
+  </g>
+
+  <!-- MIDDLE CONNECTING PIPELINE -->
+  <g transform="translate(560, 240)">
+    <!-- Central Dio Hub Badge -->
+    <rect x="20" y="40" width="120" height="36" rx="18" fill="url(#dio-badge-grad)" filter="url(#shadow-elevated)" />
+    <text x="80" y="63" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" letter-spacing="1">DIO 5.x</text>
+
+    <!-- Request Pipe (Top) -->
+    <path d="M -15 110 L 175 110" stroke="url(#pipeline-grad)" stroke-width="3" stroke-dasharray="6 4" />
+    <polygon points="175,106 187,110 175,114" fill="#FF2D20" />
+    <rect x="35" y="94" width="90" height="22" rx="6" fill="#1E1B4B" stroke="#8B5CF6" stroke-width="1" />
+    <text x="80" y="109" text-anchor="middle" fill="#DDD6FE" font-family="monospace" font-size="10.5" font-weight="700">POST /upload</text>
+
+    <!-- Response Pipe (Bottom) -->
+    <path d="M 175 180 L -15 180" stroke="url(#pipeline-grad)" stroke-width="3" stroke-dasharray="6 4" />
+    <polygon points="-15,176 -27,180 -15,184" fill="#38BDF8" />
+    <rect x="35" y="164" width="90" height="22" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1" />
+    <text x="80" y="179" text-anchor="middle" fill="#A7F3D0" font-family="monospace" font-size="10.5" font-weight="700">200 OK JSON</text>
+
+    <!-- Security Lock Icon / Token Pill -->
+    <rect x="15" y="240" width="130" height="28" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" />
+    <text x="80" y="258" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Bearer Auth Active</text>
+  </g>
+
+  <!-- RIGHT PANEL: LARAVEL REST BACKEND -->
+  <g transform="translate(740, 220)" filter="url(#shadow-elevated)">
+    <rect x="0" y="0" width="460" height="400" rx="24" fill="url(#laravel-box-grad)" stroke="rgba(255, 45, 32, 0.28)" stroke-width="1.5" />
+
+    <g transform="translate(28, 28)">
+      <rect x="0" y="0" width="112" height="30" rx="15" fill="rgba(255, 45, 32, 0.15)" stroke="rgba(255, 45, 32, 0.35)" stroke-width="1" />
+      <text x="56" y="19" text-anchor="middle" fill="#FF2D20" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">LARAVEL 11</text>
+      <text x="126" y="21" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">REST API &amp; Auth</text>
+    </g>
+
+    <text x="28" y="86" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Sanctum guard, request validation &amp; resources</text>
+
+    <!-- Code Block -->
+    <rect x="28" y="108" width="404" height="172" rx="14" fill="#0C0406" stroke="rgba(255, 45, 32, 0.18)" stroke-width="1" />
+    <circle cx="48" cy="128" r="4.5" fill="#EF4444" opacity="0.7" />
+    <circle cx="62" cy="128" r="4.5" fill="#F59E0B" opacity="0.7" />
+    <circle cx="76" cy="128" r="4.5" fill="#10B981" opacity="0.7" />
+    <text x="330" y="130" fill="#64748B" font-family="monospace" font-size="11">api_routes.php</text>
+
+    <text x="44" y="160" fill="#F43F5E" font-family="monospace" font-size="12.5">Route::middleware(</text>
+    <text x="190" y="160" fill="#38BDF8" font-family="monospace" font-size="12.5">'auth:sanctum'</text>
+    <text x="290" y="160" fill="#F43F5E" font-family="monospace" font-size="12.5">)-&gt;group(</text>
+    <text x="54" y="184" fill="#F1F5F9" font-family="monospace" font-size="12">function () {</text>
+    <text x="64" y="208" fill="#F1F5F9" font-family="monospace" font-size="12">Route::post(<tspan fill="#34D399">'/upload'</tspan>, [MediaCtrl::class, <tspan fill="#34D399">'store'</tspan>]);</text>
+    <text x="64" y="232" fill="#F1F5F9" font-family="monospace" font-size="12">Route::get(<tspan fill="#34D399">'/profile'</tspan>, [UserCtrl::class, <tspan fill="#34D399">'show'</tspan>]);</text>
+    <text x="44" y="258" fill="#F1F5F9" font-family="monospace" font-size="12">});</text>
+
+    <!-- Features Pill Row -->
+    <g transform="translate(28, 302)">
+      <rect x="0" y="0" width="124" height="32" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" />
+      <circle cx="16" cy="16" r="3.5" fill="#FF2D20" />
+      <text x="26" y="20" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500">Sanctum Tokens</text>
+
+      <rect x="134" y="0" width="124" height="32" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" />
+      <circle cx="150" cy="16" r="3.5" fill="#FF2D20" />
+      <text x="160" y="20" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500">FormRequest Valid</text>
+
+      <rect x="268" y="0" width="136" height="32" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" />
+      <circle cx="284" cy="16" r="3.5" fill="#FF2D20" />
+      <text x="294" y="20" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="500">Resource JSON</text>
+    </g>
+
+    <!-- Connection State -->
+    <g transform="translate(28, 354)">
+      <circle cx="8" cy="10" r="4.5" fill="#10B981" />
+      <text x="22" y="14" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">ENDPOINTS ACTIVE</text>
+      <text x="270" y="14" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="12">PHP 8.3 • Eloquent</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Gradient -->
+  <rect x="0" y="714" width="1280" height="6" fill="url(#pipeline-grad)" />
+</svg>
