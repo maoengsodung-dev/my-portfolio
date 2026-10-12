@@ -52,6 +52,40 @@ export const blogPosts: BlogPost[] = [
       "Prototyping in Figma can help validate user flows before implementation begins. Test whether users can complete key tasks, understand the available actions, and recover from errors. In emergency-support products, accessibility, clarity, and trustworthy information are essential design considerations.",
     ],
   },
+  {
+    slug: "designing-mobile-ux-for-emergencies",
+    title: "Designing Mobile Experiences for Emergency Situations",
+    excerpt:
+      "How clear navigation, accessible interfaces, location-based features, and thoughtful user flows can make emergency-support concepts easier to use.",
+    date: "2026-07-11",
+    readingTime: "6 min read",
+    tags: ["UI/UX Design", "Figma", "Accessibility", "Mobile Design"],
+    coverImage: "/blog/emergency-mobile-ux.svg",
+    content: [
+      "Mobile interfaces designed for emergencies need to help users find essential information quickly. Complex navigation, unclear labels, and crowded screens can make important actions harder to identify when users are under stress.",
+      "For a hospital finder concept, start by mapping the main user journeys: finding nearby hospitals, viewing contact information, opening directions, and accessing emergency contacts. Organize these journeys around the tasks users need to complete rather than the internal structure of the application.",
+      "Visual hierarchy is especially important. Clear action labels, readable typography, consistent spacing, and strong contrast help make information easier to scan. Important actions should be identifiable without relying on color alone, and touch targets should be comfortable to use.",
+      "Location features should communicate their limitations clearly. Explain when location permission is needed, provide a useful fallback when permission is denied, and give users a way to select a location manually. Hospital information should also be kept accurate and regularly verified.",
+      "Prototyping in Figma can help validate user flows before implementation begins. Test whether users can complete key tasks, understand the available actions, and recover from errors. In emergency-support products, accessibility, clarity, and trustworthy information are essential design considerations.",
+    ],
+  },
+  {
+    slug: "designing-mobile-ux-for-emergencies",
+    title: "Designing Mobile Experiences for Emergency Situations",
+    excerpt:
+      "How clear navigation, accessible interfaces, location-based features, and thoughtful user flows can make emergency-support concepts easier to use.",
+    date: "2026-07-11",
+    readingTime: "6 min read",
+    tags: ["UI/UX Design", "Figma", "Accessibility", "Mobile Design"],
+    coverImage: "/blog/emergency-mobile-ux.svg",
+    content: [
+      "Mobile interfaces designed for emergencies need to help users find essential information quickly. Complex navigation, unclear labels, and crowded screens can make important actions harder to identify when users are under stress.",
+      "For a hospital finder concept, start by mapping the main user journeys: finding nearby hospitals, viewing contact information, opening directions, and accessing emergency contacts. Organize these journeys around the tasks users need to complete rather than the internal structure of the application.",
+      "Visual hierarchy is especially important. Clear action labels, readable typography, consistent spacing, and strong contrast help make information easier to scan. Important actions should be identifiable without relying on color alone, and touch targets should be comfortable to use.",
+      "Location features should communicate their limitations clearly. Explain when location permission is needed, provide a useful fallback when permission is denied, and give users a way to select a location manually. Hospital information should also be kept accurate and regularly verified.",
+      "Prototyping in Figma can help validate user flows before implementation begins. Test whether users can complete key tasks, understand the available actions, and recover from errors. In emergency-support products, accessibility, clarity, and trustworthy information are essential design considerations.",
+    ],
+  },
 ];
 
 export function getPostBySlug(slug: string) {
