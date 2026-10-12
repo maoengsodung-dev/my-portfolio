@@ -30,7 +30,15 @@ export type ExperienceItem = {
   location: string;
   summary: string;
   highlights: string[];
-  type: "Full-time" | "Freelance" | "Contract";
+  type:
+    | "Full-time"
+    | "Freelance"
+    | "Contract"
+    | "Competition"
+    | "UX/UI Design Concept"
+    | "Personal Project"
+    | "Internship"
+    | (string & {});
 };
 
 export type ServiceItem = {
